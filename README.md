@@ -1,4 +1,4 @@
-### Hi there 👋
+### Hello World！ 👋
 
 <!--
 **Anonymity-0/Anonymity-0** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
@@ -14,9 +14,9 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-🌱 CQU
-🤔 I’m looking for help with ...
-💬 stay hungry stay foolish
-📫 How to reach me: ...
-😄 Pronouns: ...
-⚡ Fun fact: ...
+- 🌱 I’m currently learning JAVA
+- 💬 Stay hungry Stay foolish
+- 📫 How to reach me: 
+  - CSDN:嗯好的我知道了
+  - 📧:anonymity0.0@outlook.com
+- ⚡ Fun fact: movie
