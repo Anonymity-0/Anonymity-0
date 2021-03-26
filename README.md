@@ -19,4 +19,4 @@ Here are some ideas to get you started:
 - 📫 How to reach me: 
   - CSDN:嗯好的我知道了
   - 📧:anonymity0.0@outlook.com
-- ⚡ Fun fact: movie
+- ⚡ Fun: movie
