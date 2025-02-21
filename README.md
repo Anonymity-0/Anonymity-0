@@ -17,6 +17,5 @@ Here are some ideas to get you started:
 - 🌱 I’m currently learning JAVA
 - 💬 Stay hungry Stay foolish
 - 📫 How to reach me: 
-  - CSDN:嗯好的我知道了
-  - 📧:anonymity0.0@outlook.com
-- ⚡ Fun: movie
+  - 📧:gagaq.0716@gmail.com
+- ⚡ Fun: 🏸
