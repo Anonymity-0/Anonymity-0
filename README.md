@@ -1,4 +1,4 @@
-![乌萨奇和小八的拔草花园](./assets/chiikawa-garden.gif)
+![乌萨奇和小八的拔草花园](https://raw.githubusercontent.com/Anonymity-0/Anonymity-0/main/assets/chiikawa-garden-web.gif)
 
 ### Hello World！ 👋
 
