@@ -1,3 +1,5 @@
+![乌萨奇和小八的拔草花园](./assets/chiikawa-garden.gif)
+
 ### Hello World！ 👋
 
 <!--
