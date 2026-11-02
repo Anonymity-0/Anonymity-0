@@ -1,0 +1,45 @@
+name: 更新贡献草地
+
+on:
+  schedule:
+    - cron: '17 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: contribution-garden
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: 获取真实贡献日历
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api graphql \
+            -f query='query($login: String!) { user(login: $login) { contributionsCollection { contributionCalendar { totalContributions weeks { contributionDays { date contributionCount contributionLevel } } } } } }' \
+            -f login="$GITHUB_REPOSITORY_OWNER" > "$RUNNER_TEMP/contributions.json"
+      - name: 生成浅色和深色动画
+        run: |
+          python3 scripts/render_garden.py \
+            --data "$RUNNER_TEMP/contributions.json" \
+            --sprites assets/chiikawa-sprites \
+            --output "$RUNNER_TEMP/garden"
+      - name: 发布到动画分支
+        run: |
+          git fetch origin garden-output
+          git worktree add --detach "$RUNNER_TEMP/publish-garden" origin/garden-output
+          cp "$RUNNER_TEMP/garden/chiikawa-light.svg" "$RUNNER_TEMP/publish-garden/chiikawa-light.svg"
+          cp "$RUNNER_TEMP/garden/chiikawa-dark.svg" "$RUNNER_TEMP/publish-garden/chiikawa-dark.svg"
+          cd "$RUNNER_TEMP/publish-garden"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add chiikawa-light.svg chiikawa-dark.svg
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m '更新贡献草地'
+          git push origin HEAD:garden-output

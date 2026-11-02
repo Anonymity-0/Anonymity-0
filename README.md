@@ -1,4 +1,7 @@
-![乌萨奇和小八的拔草花园](https://raw.githubusercontent.com/Anonymity-0/Anonymity-0/main/assets/chiikawa-garden-web.gif)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Anonymity-0/Anonymity-0/garden-output/chiikawa-dark.svg">
+  <img alt="乌萨奇和小八的贡献草地" src="https://raw.githubusercontent.com/Anonymity-0/Anonymity-0/garden-output/chiikawa-light.svg" width="100%">
+</picture>
 
 ### Hello World！ 👋
 
